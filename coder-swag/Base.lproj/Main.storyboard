@@ -27,34 +27,34 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-g5-Mee">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-g5-Mee">
                                 <rect key="frame" x="0.0" y="48" width="414" height="624"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="OBG-LW-8T6" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="150" id="OBG-LW-8T6" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBG-LW-8T6" id="fkR-dC-pTw">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OBG-LW-8T6" id="fkR-dC-pTw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="Uy7-0T-Vf3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="Uy7-0T-Vf3">
+                                                    <rect key="frame" x="0.0" y="3" width="414" height="144"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl5-EI-dJX">
-                                                    <rect key="frame" x="152" y="58.333333333333343" width="110" height="33"/>
+                                                    <rect key="frame" x="152" y="58.666666666666657" width="110" height="33"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Uy7-0T-Vf3" secondAttribute="bottom" id="M7o-Uw-BZQ"/>
+                                                <constraint firstItem="Uy7-0T-Vf3" firstAttribute="top" secondItem="fkR-dC-pTw" secondAttribute="top" constant="3" id="Bkd-Bb-Y64"/>
                                                 <constraint firstItem="Uy7-0T-Vf3" firstAttribute="leading" secondItem="fkR-dC-pTw" secondAttribute="leading" id="b67-Nc-IRk"/>
                                                 <constraint firstItem="Sl5-EI-dJX" firstAttribute="centerX" secondItem="fkR-dC-pTw" secondAttribute="centerX" id="fhA-wD-O5W"/>
-                                                <constraint firstItem="Uy7-0T-Vf3" firstAttribute="top" secondItem="fkR-dC-pTw" secondAttribute="top" id="jE3-2e-Rve"/>
                                                 <constraint firstAttribute="trailing" secondItem="Uy7-0T-Vf3" secondAttribute="trailing" id="nbS-1m-hjh"/>
                                                 <constraint firstItem="Sl5-EI-dJX" firstAttribute="centerY" secondItem="fkR-dC-pTw" secondAttribute="centerY" id="uXe-nh-2Yb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uy7-0T-Vf3" secondAttribute="bottom" constant="3" id="z55-de-vgw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

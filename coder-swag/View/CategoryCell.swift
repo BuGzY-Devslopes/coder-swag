@@ -13,6 +13,13 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
+    var category: Category! {
+        didSet {
+            categoryImage.image = UIImage(named: category.imageName)
+            categoryName.text = category.title
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
