@@ -11,8 +11,9 @@ import UIKit
 class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private let categoryCellIdentifier = "categoryCell"
+    private let toProductsSegue = "toProducts"
     
-//    let categories = DataService.instance.getCategories()
+    //    let categories = DataService.instance.getCategories()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,9 +41,24 @@ class CategoriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 150
-//    }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == toProductsSegue {
+            if let destVC = segue.destination as? ProductsVC {
+                if let category = sender as? CategoryCell {
+                    print(category.categoryName.text!)
+                    destVC.products = DataService.instance.getProducts(forCategoryTitle: category.categoryName.text!)
+                    destVC.title = category.categoryName.text!
+                    
+                    let barButton = UIBarButtonItem()
+                    barButton.title = ""
+                    barButton.tintColor = .white
+                    navigationItem.backBarButtonItem = barButton
+                    
+                }
+                
+            }
+        }
+    }
+    
 }
 
